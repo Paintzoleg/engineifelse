@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Engine</title>
+</head>
+<style>
+	html {
+		font-family: arial;
+		color: #004080;
+	}
+</style>
+ <h1>If Else</h1>
+<body>
+   
+    <div class="title">if else with button example</div><br>
+    <button>Start Engine</button>
+    <p>Engine Stoped</p>
+    <img id="myImage" src="engn.png" style="width:300px">
+    
+    <script>
+        let butn = document.querySelector("button"); //appeal to the button
+        let text = document.querySelector("p"); //appeal to the text
+
+        butn.addEventListener("click", butnFunc); //intercept: click events
+
+        function butnFunc() {
+        if (butn.textContent === "Start Engine") {
+            butn.textContent = "Stop Engine";
+            text.textContent = "Engine Work";
+            document.getElementById('myImage').src='engw.gif';
+
+        } else {
+            butn.textContent = "Start Engine";
+            text.textContent = "Engine Stoped";
+            document.getElementById('myImage').src='engn.png';
+        }
+        }
+    </script>
+</body>
+</html>
